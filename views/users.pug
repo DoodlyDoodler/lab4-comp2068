@@ -2,9 +2,12 @@
 
 block content
   if (users.length)
-    table
+    table.table.table-striped
+        th User Id
+        th.text-center User Name
         each registeredUser in users
             tr
-                td= registeredUser.username
+                td= registeredUser._id
+                td.text-center= registeredUser.username
   else
     h1 No users!
